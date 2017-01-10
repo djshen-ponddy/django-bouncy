@@ -27,7 +27,6 @@ from django.conf import settings
 from django.core.cache import caches
 from django.http import HttpResponse, HttpResponseBadRequest
 from django.utils import timezone
-from django.utils.encoding import smart_str
 import dateutil.parser
 
 from django_bouncy import signals
@@ -79,7 +78,7 @@ def grab_keyfile(cert_url):
         pemfile = response.read()
         # Extract the first certificate in the file and confirm it's a valid
         # PEM certificate
-        certificates = pem.parse(smart_str(pemfile))
+        certificates = pem.parse(pemfile)
 
         # A proper certificate file will contain 1 certificate
         if len(certificates) != 1:

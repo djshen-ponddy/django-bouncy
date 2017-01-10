@@ -27,7 +27,7 @@ setup(
         'Django>=1.7',
         'python-dateutil>=2.1',
         'pyopenssl>=0.13.1',
-        'pem>=16.0.0',
+        'pem>=16.1.0',
     ],
     keywords="aws ses sns seacucumber boto",
     classifiers=[
